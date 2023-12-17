@@ -51,7 +51,7 @@
 				
 				<div>
 					<form:label path="dateNeeded">Date Needed By: </form:label>
-					<form:input type="date" path="dateNeeded"/><br/>
+					<form:input type="date" path="dateNeeded" value="${gift.dateNeeded}"/><br/>
 					<form:errors path="dateNeeded" class="errors"/>
 				</div>
 				
