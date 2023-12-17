@@ -24,7 +24,7 @@
 			<p><c:out value="${gift.user.username}"/> provided the following details / instructions regarding their gift idea: <c:out value="${gift.giftDetails}"/>.</p>
 		</div>
 	</div>
-	<form action="/gift/delete/${gift.id}" method="POST" id="purchase">
+	<form action="/gift/purchase/${gift.id}" method="POST" id="purchase">
 		<input type="hidden" name="_method" value="delete"/>
 		<input type="submit" value="Agree to Purchase" class="btn btn-success"/>
 	</form>

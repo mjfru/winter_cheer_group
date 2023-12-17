@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.codingdojo.group_project.models.Gift;
 import com.codingdojo.group_project.models.User;
@@ -48,6 +49,7 @@ public class GiftController {
 			
 			List<Gift> allGifts = giftService.allGifts();
 			model.addAttribute("allGifts", allGifts);
+			
 			return "home.jsp";
 		}
 	}
@@ -128,6 +130,18 @@ public class GiftController {
 	@DeleteMapping("/gift/delete/{id}")
 	public String deleteGift(@PathVariable("id") Long id) {
 		giftService.deleteGift(id);
+		return "redirect:/home";
+	}
+	
+	// Purchase Gift
+	@DeleteMapping("/gift/purchase/{id}")
+	public String purchaseGift(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
+		giftService.deleteGift(id);
+		
+		//Add Flash Attribute purchaseSuccess on successful purchase
+		
+		// Referenced by <c:if> in home.jsp
+		redirectAttributes.addFlashAttribute("purchaseSuccess", "true");
 		return "redirect:/home";
 	}
 

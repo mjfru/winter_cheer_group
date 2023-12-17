@@ -19,8 +19,18 @@
 		</div>
 		<h2>Welcome, <c:out value="${user.username}"/>!</h2>
 	</div>
-	<hr>
 	
+	<c:if test="${purchaseSuccess.equals('true')}">
+		<div class="page-container alert-container">
+		
+			<div class="alert alert-success" role="alert">
+				<h4 class="alert-heading">Thanks!</h4>
+				<p>You're making someone's holidays a bit brighter.</p>
+			</div>
+		
+		</div>
+	</c:if>
+
 	<div class="page-container">
 		
 		<div class="gift-form">

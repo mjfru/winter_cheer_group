@@ -62,3 +62,17 @@ select {
 .errors {
 	color: red;
 }
+
+.alert-container {
+	flex-direction: column;
+}
+
+.alert {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+}
+
+hr {
+	width: 100%;
+}
