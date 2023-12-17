@@ -48,7 +48,7 @@
 				
 				<div>
 					<form:label path="price">Price: $</form:label>
-					<form:input type="number" path="price" min = "1" max = "500"/><br/>
+					<form:input type="number" path="price" min = "1" max = "500" step="0.01"/><br/>
 					<form:errors path="price" class="errors"/>
 				</div>
 				

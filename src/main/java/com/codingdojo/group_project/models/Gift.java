@@ -71,7 +71,7 @@ public class Gift {
 	@NotNull(message = "Please indicate the approximate price of this gift.")
 	@Min(value = 1, message = "Price must not be less than $1.")
 	@Max(value = 500, message = "Price must not exceed $500.")
-	private Integer price;
+	private Double price;
 	
 	@NotNull(message = "Please indicate when this gift must be delivered by.")
 	private LocalDate dateNeeded;
@@ -145,11 +145,11 @@ public class Gift {
 		this.storeName = storeName;
 	}
 
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
