@@ -11,7 +11,9 @@
 <body>
 	<div class="header">
 			<h1>Winter Cheer</h1>
-			<a href="/home" class="btn btn-info">Back to Home</a>		
+			<a href="/home" class="btn btn-info button">Back to Home
+			<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
+			</a>
 	</div>
 	<h2>Viewing <c:out value="${gift.giftName}"/></h2>
 	<hr>
@@ -28,5 +30,29 @@
 		<input type="hidden" name="_method" value="delete"/>
 		<input type="submit" value="Agree to Purchase" class="btn btn-success"/>
 	</form>
+		<div class="window">
+	    <div class="santa">
+	      <div class="head">
+	        <div class="face">
+	          <div class="redhat">
+	            <div class="whitepart"></div>
+	            <div class="redpart"></div>
+	            <div class="hatball"></div>
+	          </div>
+	          <div class="eyes"></div>
+	          <div class="beard">
+	            <div class="nouse"></div>
+	            <div class="mouth"></div>
+	          </div>
+	        </div>
+	        <div class="ears"></div>
+	      </div>
+	      <div class="body"></div>
+	    </div>
+	  </div>
+	  <div class="message">
+	    <h1>Merry Christmas!</h1>
+	    <p style="font-size:2px">pure css Santa Caul made with ♥ by Alireza Sheikholmolouki</p>
+	  </div>
 </body>
 </html>

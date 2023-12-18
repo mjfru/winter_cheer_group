@@ -2,22 +2,24 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page isErrorPage="true" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/loginRegStyle.css"/>
-<title>Winter Cheer | Welcome</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/loginRegStyle.css"/>
+	<script type="text/javascript" src="/js/pure-snow.js"></script>
+	<title>Winter Cheer | Welcome</title>
 </head>
 <body>
+	<div id="snow" data-count="200"></div>
 	<div class="page-container">
 		
 		<div class="header">
 				<h1>Winter Cheer</h1>		
 				<h2>A Community WebApp to Make the Holidays Merrier</h2>
 			</div>
-		</div>
 		<hr>
 		
 		<div class="form-container">
@@ -50,7 +52,9 @@
 						<form:errors path="confirmPassword" class="errors"/>
 					</div>
 					<div class="buttons">
-						<input type="submit" value="Register" class="btn btn-success"/>
+						<button type="submit" value="Register" class="button">Register
+							<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
+						</button>
 					</div>
 				</form:form>
 			</div>
@@ -72,15 +76,15 @@
 					</div>
 					
 					<div class="buttons">
-						<input type="submit" value="Log In" class="btn btn-success"/>
+						<button type="submit" value="Log In" class="button">Log In
+							<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
+						</button>
 					</div>
 					
 				</form:form>
 			</div>
 			
 		</div>
-			
-	</div>
-	
+	</div>	
 </body>
 </html>

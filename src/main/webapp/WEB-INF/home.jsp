@@ -12,10 +12,13 @@
 <title>Winter Cheer | Home</title>
 </head>
 <body>
+<div class="home_background">
 	<div class="header">
 		<div class="top-header">
 			<h1>Winter Cheer</h1>
-			<a href="/logout" class="btn btn-danger">Log Out</a>		
+			<a href="/logout" class="btn btn-danger button">Log Out
+				<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
+			</a>		
 		</div>
 		<h2>Welcome, <c:out value="${user.username}"/>!</h2>
 	</div>
@@ -39,49 +42,50 @@
 				<form:input type="hidden" path="user" value="${user.id}"/>
 				
 				<div>
-					<form:label path="giftName">Gift Name: </form:label>
-					<form:input path="giftName"/><br/>
+					<form:label path="giftName" class="form_label">Gift Name: </form:label>
+					<form:input path="giftName" class="tranparent"/><br/>
 					<form:errors path="giftName" class="errors"/>
 				</div>
 				
 				<div>
-					<form:label path="giftType">Type of Gift: </form:label>
-					<form:select path="giftType" items="${types}"/><br/>
+					<form:label path="giftType" class="form_label">Type of Gift: </form:label>
+					<form:select path="giftType" items="${types}" class="tranparent"/><br/>
 					<form:errors path="giftType" class="errors"/>
 				</div>
 				
 				<div>
-					<form:label path="storeName">Where to Purchase: </form:label>
-					<form:input path="storeName"/><br/>
+					<form:label path="storeName" class="form_label">Where to Purchase: </form:label>
+					<form:input path="storeName" class="tranparent"/><br/>
 					<form:errors path="storeName" class="errors"/>
 				</div>
 				
 				<div>
-					<form:label path="price">Price: $</form:label>
-					<form:input type="number" path="price" min = "1" max = "500" step="0.01"/><br/>
+					<form:label path="price" class="form_label">Price: $</form:label>
+					<form:input type="number" path="price" min = "1" max = "500" step="0.01" class="tranparent"/><br/>
 					<form:errors path="price" class="errors"/>
 				</div>
 				
 				<div>
-					<form:label path="dateNeeded">Date Needed By: </form:label>
-					<form:input type="date" path="dateNeeded"/><br/>
+					<form:label path="dateNeeded" class="form_label">Date Needed By: </form:label>
+					<form:input type="date" path="dateNeeded" class="tranparent"/><br/>
 					<form:errors path="dateNeeded" class="errors"/>
 				</div>
 				
 				<div>
-					<form:label path="contactInfo">Preferred Contact Method: </form:label>
-					<form:input path="contactInfo" placeholder = "Email address / Phone #"/><br/>
+					<form:label path="contactInfo" class="form_label">Preferred Contact Method: </form:label>
+					<form:input path="contactInfo" placeholder = "Email address / Phone #" class="tranparent"/><br/>
 					<form:errors path="contactInfo" class="errors"/>
 				</div>
 				
 				<div id="details">
-					<form:label path="giftDetails">Details / Instructions: </form:label>
-					<form:textarea path="giftDetails" rows = "4" cols = "25" placeholder = "Size, color, brand, best prices, etc."/>
+					<form:label path="giftDetails" class="form_label">Details / Instructions: </form:label>
+					<form:textarea path="giftDetails" rows = "4" cols = "25" placeholder = "Size, color, brand, best prices, etc." class="tranparent"/>
 				</div>
 				<form:errors path="giftDetails" class="errors"/>
 				
 				<div>
-					<input type="submit" value="Add Gift" class="btn btn-success"/>
+					<button type="submit" value="Add Gift" class="button-gift"> Add Gift
+					</button>
 				</div>
 				
 			</form:form>
@@ -89,7 +93,7 @@
 	
 		<div class="posted-gifts">
 			<h3>Gift Ideas In Your Community:</h3>
-			<table class="table table-hover table-striped table-bordered">
+			<table class="table table-hover table-striped table-bordered giftTable">
 				<thead>
 					<tr>
 						<th>Gift Name:</th>
@@ -119,6 +123,7 @@
 		</div>
 	
 	</div>
+</div>
 	
 	
 </body>

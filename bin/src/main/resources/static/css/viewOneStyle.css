@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+.page-container {
+	display: flex;
+	justify-content: center;
+}
+
+.details-container {
+	border: 2px solid black;
+	padding: 20px;
+}
+
+#purchase {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}

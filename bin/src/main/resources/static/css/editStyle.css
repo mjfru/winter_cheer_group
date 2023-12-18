@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+
+.page-container {
+	margin: 0px auto;
+	margin-top: 20px;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.gift-form {
+	width: 30%;
+}
+
+.gift-form {
+	width: 30%;
+}
+
+.gift-form input, select {
+	width: 40%;
+	margin-bottom: 10px;
+}
+
+label {
+	width: 45%;
+}
+
+select {
+	text-align: center;
+}
+
+#details {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.errors {
+	color: red;
+}

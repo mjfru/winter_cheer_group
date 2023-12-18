@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+h1 {
+	margin-top: 10px;
+}
+
+.top-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.page-container {
+	margin: 0px auto;
+	margin-top: 20px;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.gift-form {
+	width: 30%;
+}
+
+.gift-form input, select {
+	width: 40%;
+	margin-bottom: 10px;
+}
+
+label {
+	width: 45%;
+}
+
+select {
+	text-align: center;
+}
+
+.posted-gifts {
+	width: 50%;
+}
+
+#details {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.user-actions {
+	display: flex;
+}
+
+.errors {
+	color: red;
+}
+
+.alert-container {
+	flex-direction: column;
+}
+
+.alert {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+}
+
+hr {
+	width: 100%;
+}
