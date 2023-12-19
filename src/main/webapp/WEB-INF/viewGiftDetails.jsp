@@ -34,28 +34,29 @@
 		<input type="submit" value="Agree to Purchase" class="btn btn-success"/>
 	</form>
 		<div class="window">
-	    <div class="santa">
-	      <div class="head">
-	        <div class="face">
-	          <div class="redhat">
-	            <div class="whitepart"></div>
-	            <div class="redpart"></div>
-	            <div class="hatball"></div>
-	          </div>
-	          <div class="eyes"></div>
-	          <div class="beard">
-	            <div class="nouse"></div>
-	            <div class="mouth"></div>
-	          </div>
-	        </div>
-	        <div class="ears"></div>
-	      </div>
-	      <div class="body"></div>
-	    </div>
-	  </div>
-	  <div class="message">
-	    <h1>Merry Christmas!</h1>
-	    <p style="font-size:2px">pure css Santa Caul made with ♥ by Alireza Sheikholmolouki</p>
-	  </div>
+		    <div class="santa">
+		      <div class="head">
+		        <div class="face">
+		          <div class="redhat">
+		            <div class="whitepart"></div>
+		            <div class="redpart"></div>
+		            <div class="hatball"></div>
+		          </div>
+		          <div class="eyes"></div>
+		          <div class="beard">
+		            <div class="nouse"></div>
+		            <div class="mouth"></div>
+		          </div>
+		        </div>
+		        <div class="ears"></div>
+		      </div>
+		      <div class="body"></div>
+		    </div>
+		</div>
+		<div class="message">
+		  <h1>Merry Christmas!</h1>
+		  <p style="font-size:2px">pure css Santa Caul made with ♥ by Alireza Sheikholmolouki</p>
+		</div>
+	
 </body>
 </html>

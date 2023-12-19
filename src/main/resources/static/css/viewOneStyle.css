@@ -22,6 +22,7 @@ h2 {
 .page-container {
 	display: flex;
 	justify-content: center;
+    z-index: 100;
 }
 
 .details-container {
@@ -33,6 +34,7 @@ h2 {
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;
+	z-index: 100;
 }
 ::selection {
   background: rgba(255,255,0,0.5);
@@ -70,7 +72,6 @@ body {
 	filter: drop-shadow(0 2px 1px rgb(0 0 0 / .25));
 }
 
-
 .window {
   width: 340px;
   height: 340px;
@@ -86,7 +87,9 @@ body {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border: 10px solid #f8e7dc;
-  overflow: hidden; }
+  overflow: hidden; 
+	z-index: -100;  
+}
 
 .santa {
   position: absolute;
@@ -96,7 +99,8 @@ body {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  transform: translateX(-50%); 
+}
   .santa .body {
     width: 190px;
     height: 210px;
@@ -113,7 +117,8 @@ body {
     -moz-transform: translateY(50%);
     -ms-transform: translateY(50%);
     -o-transform: translateY(50%);
-    transform: translateY(50%); }
+    transform: translateY(50%); 
+    }
     .santa .body:before {
       content: " ";
       width: 7px;
@@ -128,7 +133,8 @@ body {
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      box-shadow: 0px -18px 0px #f7be10, 0px 18px 0px #f7be10; }
+      box-shadow: 0px -18px 0px #f7be10, 0px 18px 0px #f7be10; 
+      }
   .santa .head {
     z-index: 2;
     position: absolute;
