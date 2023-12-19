@@ -1,5 +1,9 @@
 package com.codingdojo.group_project.controllers;
 
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,6 +97,18 @@ public class GiftController {
 			model.addAttribute("user", user);
 			Gift gift = giftService.findOneGift(id);
 			model.addAttribute("gift", gift);
+			
+			//Convert dateNeeded from LocalDate to Date for compatibility with DateFormat
+			Date dateNeeded = Date.from(gift.getDateNeeded().atStartOfDay(ZoneId.systemDefault()).toInstant());
+			model.addAttribute("dateNeeded", dateNeeded);
+			
+			//Create and add DecimalFormat instance to format price
+			DecimalFormat numberFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance();
+			model.addAttribute("numberFormat", numberFormat);
+			
+			//Create and add DateFormat instance to format date
+			DateFormat dateFormat = DateFormat.getDateInstance();
+			model.addAttribute("dateFormat", dateFormat);
 			return "viewGiftDetails.jsp";
 		}
 	}

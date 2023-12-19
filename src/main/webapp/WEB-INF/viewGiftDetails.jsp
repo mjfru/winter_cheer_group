@@ -23,9 +23,9 @@
 	<div class="page-container">
 		<div class="details-container">
 			<p>This gift belongs in the "<c:out value="${gift.giftType}"/>" category 
-			and can be purchased at <c:out value="${gift.storeName}"/> for about $<c:out value="${gift.price}"/>.</p>
+			and can be purchased at <c:out value="${gift.storeName}"/> for about <c:out value="${numberFormat.format(gift.price)}"/>.</p>
 			<p>This present was posted by <c:out value="${gift.user.username}"/> and he/she may be contacted at <c:out value="${gift.contactInfo}"/>
-			before the requested date <c:out value="${gift.dateNeeded}"/>.</p>
+			before the requested date <c:out value="${dateFormat.format(dateNeeded)}"/>.</p>
 			<p><c:out value="${gift.user.username}"/> provided the following details / instructions regarding their gift idea: <c:out value="${gift.giftDetails}"/>.</p>
 		</div>
 	</div>
