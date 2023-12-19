@@ -4,6 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Farsan&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/css/viewOneStyle.css"/>
 <title>Viewing <c:out value="${gift.giftName}"/></title>
@@ -15,7 +18,7 @@
 			<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
 			</a>
 	</div>
-	<h2>Viewing <c:out value="${gift.giftName}"/></h2>
+	<h2>Viewing <span><c:out value="${gift.giftName}"/></span></h2>
 	<hr>
 	<div class="page-container">
 		<div class="details-container">

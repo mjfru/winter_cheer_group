@@ -7,6 +7,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Farsan&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/css/homeStyle.css"/>
 <title>Winter Cheer | Home</title>
@@ -20,7 +23,7 @@
 				<img class="button-hat" src="https://res.cloudinary.com/freecodez/image/upload/v1701705719/images/guidvrtf8kre7pc3jdk5.webp" alt="">
 			</a>		
 		</div>
-		<h2>Welcome, <c:out value="${user.username}"/>!</h2>
+		<h2>Welcome, <span><c:out value="${user.username}"/></span>!</h2>
 	</div>
 	
 	<c:if test="${purchaseSuccess.equals('true')}">
@@ -49,7 +52,7 @@
 				
 				<div>
 					<form:label path="giftType" class="form_label">Type of Gift: </form:label>
-					<form:select path="giftType" items="${types}" class="tranparent"/><br/>
+					<form:select path="giftType" items="${types}" class="tranparent" id="select-box"/><br/>
 					<form:errors path="giftType" class="errors"/>
 				</div>
 				
@@ -83,7 +86,7 @@
 				</div>
 				<form:errors path="giftDetails" class="errors"/>
 				
-				<div>
+				<div id="btn-box">
 					<button type="submit" value="Add Gift" class="button-gift"> Add Gift
 					</button>
 				</div>
@@ -104,15 +107,15 @@
 				<tbody>
 					<c:forEach var="gift" items="${allGifts}">
 						<tr>
-							<td><c:out value="${gift.giftName}"/></td>
-							<td><c:out value="${gift.user.username}"/></td>
+							<td id="gift-info"><c:out value="${gift.giftName}"/></td>
+							<td id="gift-info"><c:out value="${gift.user.username}"/></td>
 							<td class="user-actions">
-								<a href="/gift/${gift.id}" class="btn btn-info">Details</a>
+								<a href="/gift/${gift.id}" class="btn btn-success" id="one-action">Details</a>
 								<c:if test="${gift.user.id == user.id}">
-									<a href="gift/edit/${gift.id}" class="btn btn-secondary">Edit</a>
+									<a href="gift/edit/${gift.id}" class="btn btn-secondary" id="one-action">Edit</a>
 									<form action="/gift/delete/${gift.id}" method="POST">
 										<input type="hidden" name="_method" value="delete"/>
-										<input type="submit" value="Delete" class="btn btn-danger"/>
+										<input type="submit" value="Delete" class="btn btn-danger" id="one-action"/>
 									</form>
 								</c:if>
 							</td>

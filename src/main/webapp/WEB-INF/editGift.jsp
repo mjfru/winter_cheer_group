@@ -6,6 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Farsan&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/css/editStyle.css"/>
 <meta charset="UTF-8">
@@ -69,7 +72,7 @@
 					</div>
 					<form:errors path="giftDetails" class="errors"/>
 					
-					<div>
+					<div id="btn-box">
 						<input type="submit" value="Confirm Edit" class="button-gift"/>
 					</div>
 					

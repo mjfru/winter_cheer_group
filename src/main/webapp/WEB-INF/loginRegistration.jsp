@@ -7,6 +7,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Farsan&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/css/loginRegStyle.css"/>
 	<script type="text/javascript" src="/js/pure-snow.js"></script>
@@ -26,7 +29,7 @@
 			
 			<div class="registration">
 				<h3>Want to Contribute?</h3>
-				<h3>Register Here: </h3>
+				<h4>Register Here: </h4>
 				<form:form action="/register" method="POST" modelAttribute="newUser">
 					<div>
 						<form:label path="username">Username: </form:label>
@@ -61,7 +64,7 @@
 			
 			<div class="login">
 				<h3>Already a Member?</h3>
-				<h3>Login: </h3>
+				<h4>Login: </h4>
 				<form:form action="/login" method="POST" modelAttribute="newLogin">
 					<div>
 						<form:label path="email">Email: </form:label>
